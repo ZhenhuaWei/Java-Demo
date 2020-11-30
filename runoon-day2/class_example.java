@@ -9,6 +9,8 @@ public class Dog {//类 的一个例子
     String colour;
     int age;
 
+    String str="hello world";  // 实例变量
+    
     void eat(){
         //局部变量
         int eat_times;
