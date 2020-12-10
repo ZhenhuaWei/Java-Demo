@@ -30,6 +30,7 @@ public class Dog {//类 的一个例子
 }
 
 //构造方法 例子
+/*
 public class PuppyTest{
     public PuppyTest(){//每个类都有构造方法。如果没显示地为类定义构造方法，Java编译器将会为该类提供一个默认构造方法
     }
@@ -39,4 +40,4 @@ public class PuppyTest{
     }
 }
 
-
+*/
