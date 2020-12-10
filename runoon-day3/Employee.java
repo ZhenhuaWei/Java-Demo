@@ -1,4 +1,4 @@
-import java.io.*;
+// import java.io.*;
 /*
 public class Employee {
     //这个实例变量对子类可见
@@ -38,13 +38,31 @@ public class Employee{//类名称首字母大写
     //DEPARTMENT是一个常量
     public static final String DEPARTMENT="开发人员";//常量需要全部大写
 
+    public void setSalay(double salary){
+        System.out.println("start setSalay" + salary);
+        Employee.salary = salary;
+        System.out.println("end setSalay" + Employee.salary);
+    }
+
     public static void printSalary(){//方法首字母不大写，紧接的单词首字母要大写
-        System.out.println("实际薪资："+ salary);
+        System.out.println("printSalary 实际薪资："+ Employee.salary);
     }
 
     public static void main(String[] args){
         salary = 10000;//变量不要大写
         System.out.println(DEPARTMENT+"工资："+ salary);
+
+        System.out.println("===========");
+        Employee employee1 = new Employee();
+        Employee employee2 = new Employee();
+
+        employee1.setSalay(50000.0);
+
+        System.out.println("employee 1=====:");
+        employee1.printSalary();
+        System.out.println("employee 2=====:");
+        employee2.printSalary();
+
 
         Employee.salary = 30000;//不需要实例化类，直接修改static静态变量，后直接可以使用
         System.out.println("升职加薪后："+Employee.salary);
