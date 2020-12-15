@@ -38,9 +38,11 @@ public class Employee{//类名称首字母大写
     //DEPARTMENT是一个常量
     public static final String DEPARTMENT="开发人员";//常量需要全部大写
 
+    //下面是声明的类常量
+    static final String TITLE = "Manager";
     public void setSalay(double salary){
         System.out.println("start setSalay" + salary);
-        Employee.salary = salary;
+        Employee.salary = salary;//也可以写成 this.salary = salary; 但是不能写成salay = salary; 因为变量使用的是就近原则
         System.out.println("end setSalay" + Employee.salary);
     }
 
