@@ -1,4 +1,4 @@
-public class TestNumber{
+public class TestNumberMath{
     public static void main(String[] args)
     {
         //当 x 被赋为整型值时，由于x是一个对象，
@@ -16,13 +16,21 @@ public class TestNumber{
         System.out.println("PI/2的角度值"+Math.toDegrees(Math.PI/2));
         System.out.println(Math.PI);
 
-        double[] nums = {1.4, 1.5, 1.6, -1.4, -1.5, -1.6};
+        //定义一个数组的两种写法 定义的是静态数组，一旦定义初始化后，长度就固定， 
+        //如果想使用变长的 请使用数组列表（ArrayList 也称为动态数组）或者使用向量Vector
+        // double[] nums = {1.4, 1.5, 1.6, -1.4, -1.5, -1.6};
+        double nums[] = {1.4, 1.5, 1.6, -1.4, -1.5, -1.6};
+        //加强型for使用
         for(double num: nums){
             test(num);
         }
+
+        System.out.println("num[0] = " + nums[0]);
+        nums[0] = 100;
+        System.out.println("num[0] = " + nums[0]);
     }
 
-    //试一试main函数在上 实现方法在下这这样的调用方式，c语言的化会报错
+    //main函数在上 实现方法在下这这样的调用方式，c语言的化会报错
     public static void test(double num){
         System.out.println("Math.floor(" + num +")=" + Math.floor(num));
         System.out.println("Math.round(" + num +")=" + Math.round(num));
